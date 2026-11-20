@@ -2,7 +2,7 @@
 
 All notable changes to Nautilus Office Preview are documented here.
 
-## [1.0.0] - Initial release candidate
+## [1.0.0] - 2026-11-20
 
 ### Added
 
