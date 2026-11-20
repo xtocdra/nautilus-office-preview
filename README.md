@@ -90,10 +90,6 @@ pkill -x sushi 2>/dev/null || true
 
 Open Nautilus, select a supported document and press **Space**.
 
-### Arch Linux
-
-An Arch Linux package and AUR release are planned.
-
 The intended system-wide plugin directory is:
 
 ```text
