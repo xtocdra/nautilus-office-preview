@@ -52,6 +52,22 @@ These are tested versions, not declared minimum requirements.
 
 ## Installation
 
+### AUR Package Installation
+#### Requirements
+
+- Arch Linux
+- Git
+- `base-devel`
+
+#### Build and install
+Clone this repository:
+
+```bash
+git clone https://github.com/xtocdra/nautilus-office-preview-aur.git
+cd nautilus-office-preview-aur
+makepkg -si
+```
+
 ### Manual installation
 
 Clone or download the project source, then copy the plugin and its viewer assets into the user plugin directory.
@@ -117,23 +133,6 @@ npm run check
 
 The validation script checks JavaScript syntax, required assets, viewer references and registered Office MIME types.
 
-## AUR Package Installation
-
-### Requirements
-
-- Arch Linux
-- Git
-- `base-devel`
-
-### Build and install
-
-Clone this repository:
-
-```bash
-git clone https://github.com/xtocdra/nautilus-office-preview-aur.git
-cd nautilus-office-preview-aur
-makepkg -si
-```
 
 ## Project Structure
 ```text
