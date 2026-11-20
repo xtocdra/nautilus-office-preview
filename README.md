@@ -140,6 +140,23 @@ nautilus-office-preview/
     └── mtx-decompressor/
 ```
 
+## AUR Package Installation
+
+### Requirements
+
+- Arch Linux
+- Git
+- `base-devel`
+
+### Build and install
+
+Clone this repository:
+
+```bash
+git clone https://github.com/xtocdra/nautilus-office-preview-aur.git
+cd nautilus-office-preview-aur
+
+
 ## Rendering architecture
 
 GNOME Sushi loads `office-preview.js` as a GJS plugin.
