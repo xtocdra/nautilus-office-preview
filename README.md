@@ -117,6 +117,23 @@ npm run check
 
 The validation script checks JavaScript syntax, required assets, viewer references and registered Office MIME types.
 
+## AUR Package Installation
+
+### Requirements
+
+- Arch Linux
+- Git
+- `base-devel`
+
+### Build and install
+
+Clone this repository:
+
+```bash
+git clone https://github.com/xtocdra/nautilus-office-preview-aur.git
+cd nautilus-office-preview-aur
+...
+
 ### Project structure
 
 ```text
@@ -139,23 +156,6 @@ nautilus-office-preview/
 └── THIRD-PARTY-SOURCES/
     └── mtx-decompressor/
 ```
-
-## AUR Package Installation
-
-### Requirements
-
-- Arch Linux
-- Git
-- `base-devel`
-
-### Build and install
-
-Clone this repository:
-
-```bash
-git clone https://github.com/xtocdra/nautilus-office-preview-aur.git
-cd nautilus-office-preview-aur
-
 
 ## Rendering architecture
 
