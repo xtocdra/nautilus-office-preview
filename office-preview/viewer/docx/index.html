@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Office Preview</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            font-family: sans-serif;
+            background: #dedede;
+            color: #222;
+        }
+
+        #docx-styles {
+            display: none;
+        }
+
+        #docx-container {
+            padding: 24px 12px;
+            overflow: auto;
+        }
+
+        .docx-wrapper {
+            background: transparent !important;
+            padding: 0 !important;
+        }
+
+        .docx-wrapper > section.docx {
+            margin: 0 auto 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+        }
+
+        #status {
+            padding: 24px;
+            text-align: center;
+            color: #555;
+        }
+
+        #status.error {
+            color: #b00020;
+        }
+    </style>
+
+    <script src="docx-preview.js"></script>
+</head>
+
+<body>
+    <div id="docx-styles"></div>
+
+    <main id="docx-container">
+        <div id="status">Loading document…</div>
+    </main>
+
+    <script>
+        async function loadDocument() {
+            const status = document.getElementById('status');
+            const container = document.getElementById('docx-container');
+            const styles = document.getElementById('docx-styles');
+
+            try {
+                const response = await fetch('document.docx');
+
+                if (!response.ok)
+                    throw new Error(`Document request failed: ${response.status}`);
+
+                const data = await response.arrayBuffer();
+
+                container.replaceChildren();
+
+                await DocxPreview.renderAsync(
+                    data,
+                    container,
+                    styles,
+                    {
+                        className: 'docx',
+                        inWrapper: true,
+                        breakPages: true,
+                        renderHeaders: true,
+                        renderFooters: true,
+                        renderFootnotes: true,
+                        renderEndnotes: true,
+                    }
+                );
+            } catch (error) {
+                console.error(error);
+
+                status.textContent =
+                    'Unable to preview this document: ' + error.message;
+
+                status.classList.add('error');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', loadDocument);
+    </script>
+</body>
+</html>

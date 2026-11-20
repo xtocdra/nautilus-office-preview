@@ -1,0 +1,21 @@
+{
+  "name": "nautilus-office-preview",
+  "version": "1.0.0",
+  "description": "DOCX, XLSX and PPTX preview plugin for GNOME Nautilus Sushi",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "check": "bash scripts/check.sh",
+    "test": "bash scripts/check.sh"
+  },
+  "devDependencies": {
+    "@aiden0z/pptx-renderer": "1.4.0",
+    "docx-preview": "0.4.1",
+    "esbuild": "0.28.2",
+    "xlsx": "file:vendor/xlsx-0.20.3.tgz"
+  }
+}

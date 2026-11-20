@@ -1,0 +1,26 @@
+# Node.js development dependencies
+/node_modules/
+/.npm/
+
+# Logs and editor files
+*.log
+.DS_Store
+*~
+
+# Root-level development test material
+/test-plugin/
+/test-docx.html
+/test-workbook.xlsx
+/viewer/
+/viewer-xlsx/
+/viewer-pptx/
+/assets/
+
+# Previous development snapshot
+/office-preview.js.pre-three-format
+
+# Arch packaging build artifacts
+/pkg/
+/src/
+*.pkg.tar.zst
+*.src.tar.gz

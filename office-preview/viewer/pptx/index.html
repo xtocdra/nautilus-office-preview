@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PowerPoint Preview</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            color: #242424;
+            background: #f4f4f4;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #toolbar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 48px;
+            padding: 8px 14px;
+            background: #ffffff;
+            border-bottom: 1px solid #d8d8d8;
+        }
+
+        #open-file {
+            padding: 6px 12px;
+            border: 1px solid #c8c8c8;
+            border-radius: 6px;
+            background: #ffffff;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        #status {
+            margin-left: auto;
+            color: #777;
+            font-size: 12px;
+        }
+
+        #status.error {
+            color: #b00020;
+        }
+
+        #pptx-container {
+            flex: 1;
+            min-height: 0;
+            overflow: auto;
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="toolbar">
+        <button id="open-file">Open presentation</button>
+
+        <input
+            id="file-input"
+            type="file"
+            accept=".pptx"
+        >
+
+        <span id="status">Select a PowerPoint presentation.</span>
+    </header>
+
+    <main id="pptx-container"></main>
+
+    <script src="pptx-renderer.js"></script>
+    <script src="pptx-preview.js"></script>
+</body>
+</html>
