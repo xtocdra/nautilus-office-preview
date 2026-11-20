@@ -132,10 +132,10 @@ Clone this repository:
 ```bash
 git clone https://github.com/xtocdra/nautilus-office-preview-aur.git
 cd nautilus-office-preview-aur
-...
+makepkg -si
+```
 
-### Project structure
-
+## Project Structure
 ```text
 nautilus-office-preview/
 ├── LICENSE
